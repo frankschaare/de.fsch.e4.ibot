@@ -11,7 +11,12 @@
 package de.fsch.e4.ibot.parts;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+
+import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.e4.ui.model.application.MApplication;
+import org.eclipse.e4.ui.model.application.ui.basic.MWindow;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -19,13 +24,22 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
-public class SamplePart {
+import de.fsch.e4.ibot.database.IDataService;
 
-	private Label label;
-	private TableViewer tableViewer;
+public class SamplePart 
+{
+private Label label;
+private TableViewer tableViewer;
+
+@Inject IDataService dataService; 
+@Inject @Optional MApplication app;
 
 	@PostConstruct
-	public void createComposite(Composite parent) {
+	public void createComposite(Composite parent) 
+	{
+	MWindow main = app.getChildren().get(0);
+	main.setLabel("IBot - " + dataService.getInfo());
+		
 		parent.setLayout(new GridLayout());
 
 		label = new Label(parent, SWT.NONE);

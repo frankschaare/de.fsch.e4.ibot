@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Verbindungseinstellungen zur lokalen PostgreSQL Datenbank</comment>
+<entry key="host">localhost</entry>
+<entry key="port">5432</entry>
+<entry key="databaseName">ibot</entry>
+<entry key="user">postgres</entry>
+<entry key="password">l00sersinc</entry>
+</properties>

@@ -10,6 +10,7 @@
  *******************************************************************************/
 package de.fsch.e4.ibot.handlers;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.eclipse.e4.core.di.annotations.Execute;
@@ -17,9 +18,17 @@ import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Shell;
 
-public class AboutHandler {
+import de.fsch.e4.ibot.data.yahoo.IYQLConnection;
+
+public class AboutHandler 
+{
+@Inject IYQLConnection con;
+
+
 	@Execute
-	public void execute(@Named(IServiceConstants.ACTIVE_SHELL) Shell shell) {
-		MessageDialog.openInformation(shell, "About", "Eclipse 4 Application example.");
+	public void execute(@Named(IServiceConstants.ACTIVE_SHELL) Shell shell) 
+	{
+	con.getHistoricaldata();	
+	MessageDialog.openInformation(shell, "About", "Eclipse 4 Application example.");
 	}
 }
