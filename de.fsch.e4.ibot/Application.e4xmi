@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_7Bl28PFsEeKvJd3JkK1Jgg" elementId="org.eclipse.e4.ide.application" bindingContexts="_7BmeAPFsEeKvJd3JkK1Jgg">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_7Bl28fFsEeKvJd3JkK1Jgg" label="de.fsch.e4.ibot" width="500" height="400">
+    <tags>shellMaximized</tags>
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_7BmeF_FsEeKvJd3JkK1Jgg">
       <children xsi:type="advanced:Perspective" xmi:id="_7BmeGPFsEeKvJd3JkK1Jgg">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_7BmeGfFsEeKvJd3JkK1Jgg">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_7BmeGfFsEeKvJd3JkK1Jgg" containerData="" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_7BmeGvFsEeKvJd3JkK1Jgg">
-            <children xsi:type="basic:Part" xmi:id="_7BmeG_FsEeKvJd3JkK1Jgg" contributionURI="bundleclass://de.fsch.e4.ibot/de.fsch.e4.ibot.parts.SamplePart" label="Sample Part"/>
+            <children xsi:type="basic:Part" xmi:id="_7BmeG_FsEeKvJd3JkK1Jgg" contributionURI="bundleclass://de.fsch.e4.ibot/de.fsch.e4.ibot.parts.ChartPart" label="Chart"/>
           </children>
         </children>
       </children>
