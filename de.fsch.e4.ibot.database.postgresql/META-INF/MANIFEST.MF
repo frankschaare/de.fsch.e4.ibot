@@ -9,7 +9,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.osgi.framework;version="1.3.0"
 Bundle-ActivationPolicy: lazy
 Require-Bundle: de.fsch.e4.ibot.database;bundle-version="1.0.0",
- org.eclipse.equinox.registry
+ org.eclipse.equinox.registry,
+ de.fsch.e4.ibot.asset
 Service-Component: OSGI-INF/DataService.xml
 Bundle-ClassPath: .,
  lib/postgresql-9.1-901.jdbc4.jar
