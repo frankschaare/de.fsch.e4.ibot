@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="de.fsch.e4.ibot.data.csv.yahoo">
+   <implementation class="de.fsch.e4.ibot.data.csv.yahoo.CSVDatei"/>
+   <service>
+      <provide interface="de.fsch.e4.ibot.data.csv.ICSVFile"/>
+   </service>
+</scr:component>
