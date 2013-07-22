@@ -11,6 +11,7 @@ import java.util.Date;
  */
 public class Quote
 {
+private int type = 0;	
 private Date date = null;
 private double open = 0;
 private double high = 0;
@@ -18,6 +19,15 @@ private double low = 0;
 private double close = 0;
 private int volume = 0;
 private double adjClose = 0;
+
+public interface Types
+{
+public static final int TICK = 1;
+public static final int DAY = 2;
+public static final int WEEK = 3;
+public static final int MONTH = 4;
+public static final int YEAR = 5;
+}
 	
 
 	/**
@@ -26,6 +36,18 @@ private double adjClose = 0;
 	public Quote()
 	{
 
+	}
+
+
+	public int getType()
+	{
+		return type;
+	}
+
+
+	public void setType(int type)
+	{
+		this.type = type;
 	}
 
 

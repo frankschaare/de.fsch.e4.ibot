@@ -3,12 +3,17 @@
  */
 package de.fsch.e4.ibot.asset;
 
+import java.util.ArrayList;
+
 /**
  * @author hit
  *
  */
 public interface ISecurity
-{
+{	
+public ArrayList<Quote> getQuotes();
+public void setQuotes(ArrayList<Quote> quotes);
+	
 public String getType();
 public void setType(String type);
 
