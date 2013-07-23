@@ -16,7 +16,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Properties;
+import java.util.TreeMap;
 
 import org.eclipse.core.runtime.FileLocator;
 
@@ -88,7 +90,7 @@ private	Properties props;
 		try
 		{
 		ps = con.prepareStatement(PreparedStatements.INSERT_QUOTES);
-			for (Quote q : security.getQuotes())
+			for (Quote q : security.getQuotes().values())
 			{
 			ps.setString(1, security.getIsin());	
 			ps.setInt(2, q.getType());
@@ -113,9 +115,9 @@ private	Properties props;
 	}
 
 	@Override
-	public ArrayList<Quote> getQuotes(String isin, int periodType)
+	public TreeMap<Date, Quote> getQuotes(String isin, int periodType)
 	{
-	ArrayList<Quote> quotes = new ArrayList<Quote>();
+	TreeMap<Date, Quote> quotes = new TreeMap<Date, Quote>();
 	Quote q = null;
 		try
 		{
@@ -136,7 +138,7 @@ private	Properties props;
 			q.setVolume(rs.getInt(9));
 			q.setAdjClose(rs.getDouble(10));
 			
-			quotes.add(q);
+			quotes.put(q.getDate(), q);
 			}
 		}
 		catch (SQLException exception)

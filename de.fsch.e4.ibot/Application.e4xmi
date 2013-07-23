@@ -4,9 +4,12 @@
     <tags>shellMaximized</tags>
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_7BmeF_FsEeKvJd3JkK1Jgg">
       <children xsi:type="advanced:Perspective" xmi:id="_7BmeGPFsEeKvJd3JkK1Jgg">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_7BmeGfFsEeKvJd3JkK1Jgg" containerData="" horizontal="true">
-          <children xsi:type="basic:PartStack" xmi:id="_7BmeGvFsEeKvJd3JkK1Jgg">
-            <children xsi:type="basic:Part" xmi:id="_7BmeG_FsEeKvJd3JkK1Jgg" contributionURI="bundleclass://de.fsch.e4.ibot/de.fsch.e4.ibot.parts.ChartPart" label="Chart"/>
+        <children xsi:type="basic:PartSashContainer" xmi:id="_7BmeGfFsEeKvJd3JkK1Jgg" elementId="de.fsch.e4.ibot.partsashcontainer.main" containerData="70" selectedElement="_7BmeGvFsEeKvJd3JkK1Jgg">
+          <children xsi:type="basic:PartStack" xmi:id="_7BmeGvFsEeKvJd3JkK1Jgg" elementId="de.fsch.e4.ibot.partstack.main.chart" containerData="7000" selectedElement="_7BmeG_FsEeKvJd3JkK1Jgg">
+            <children xsi:type="basic:Part" xmi:id="_7BmeG_FsEeKvJd3JkK1Jgg" contributionURI="bundleclass://de.fsch.e4.ibot/de.fsch.e4.ibot.parts.ChartPart" label="Chart" iconURI="platform:/plugin/de.fsch.e4.ibot/icons/chart16px.png"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_BtkJsPNwEeK9Ur_q-A1TJQ" elementId="de.fsch.e4.ibot.partstack.main.concole" containerData="3000" selectedElement="_W-Pj8PNuEeK9Ur_q-A1TJQ">
+            <children xsi:type="basic:Part" xmi:id="_W-Pj8PNuEeK9Ur_q-A1TJQ" elementId="de.fsch.e4.ibot.parts.ConsolePart" contributionURI="bundleclass://de.fsch.e4.ibot/de.fsch.e4.ibot.parts.ConsolePart" label="Meldungen" iconURI="platform:/plugin/de.fsch.e4.ibot/icons/Script-Console-icon.png" tooltip="Zeigt die Meldungen der Applikation an" closeable="true"/>
           </children>
         </children>
       </children>

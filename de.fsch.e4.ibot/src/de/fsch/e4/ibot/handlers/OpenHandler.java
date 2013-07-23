@@ -15,6 +15,8 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.TreeMap;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -40,7 +42,7 @@ public class OpenHandler
 	stock.setIsin("DE0005557508");
 	
 	Quote q = null;
-	ArrayList<Quote> quotes = new ArrayList<Quote>();
+	TreeMap<Date, Quote> quotes = new TreeMap<Date, Quote>();
 	
 	DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 	
@@ -76,7 +78,7 @@ public class OpenHandler
 			q.setVolume(Integer.parseInt(fields[5]));
 			q.setAdjClose(Double.parseDouble(fields[6]));
 			
-			quotes.add(q);
+			quotes.put(q.getDate(), q);
 			}
 		stock.setQuotes(quotes);	
 		SQLException e = dataService.setQuotes(stock);

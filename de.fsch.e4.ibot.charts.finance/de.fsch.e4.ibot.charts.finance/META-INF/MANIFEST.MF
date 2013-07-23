@@ -11,4 +11,5 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: de.fsch.e4.ibot.charts;bundle-version="1.0.0",
  de.fsch.e4.ibot.asset,
  org.eclipse.swt
-Export-Package: de.fsch.e4.ibot.charts.finance
+Export-Package: de.fsch.e4.ibot.charts.finance,
+ de.fsch.e4.ibot.charts.finance.candlestick

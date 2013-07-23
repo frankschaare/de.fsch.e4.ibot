@@ -4,6 +4,8 @@
 package de.fsch.e4.ibot.asset;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.TreeMap;
 
 /**
  * @author hit
@@ -11,8 +13,8 @@ import java.util.ArrayList;
  */
 public interface ISecurity
 {	
-public ArrayList<Quote> getQuotes();
-public void setQuotes(ArrayList<Quote> quotes);
+public TreeMap<Date, Quote> getQuotes();
+public void setQuotes(TreeMap<Date, Quote> quotes);
 	
 public String getType();
 public void setType(String type);

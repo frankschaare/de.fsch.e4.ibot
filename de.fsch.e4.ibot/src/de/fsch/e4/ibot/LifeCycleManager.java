@@ -6,8 +6,10 @@ package de.fsch.e4.ibot;
 import javax.inject.Inject;
 
 import org.eclipse.e4.core.contexts.IEclipseContext;
+import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.e4.ui.workbench.lifecycle.PostContextCreate;
 
+import de.fsch.e4.ibot.constants.AppConstants;
 import de.fsch.e4.ibot.database.IDataService;
 
 /**
@@ -30,9 +32,9 @@ public class LifeCycleManager
 	}
 	
 	@PostContextCreate
-	public void startup(IEclipseContext context) 
+	public void startup(IEclipseContext context, IEventBroker broker)
 	{
-	// context.set(AppConstants.LOGGER, new ContextLogger(context, broker));	
+	context.set(AppConstants.LOGGER, new ContextLogger(context, broker));	
 	}
 
 }

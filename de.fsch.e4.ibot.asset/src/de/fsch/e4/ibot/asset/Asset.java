@@ -4,6 +4,8 @@
 package de.fsch.e4.ibot.asset;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.TreeMap;
 
 
 
@@ -23,7 +25,7 @@ public static final String BOND = "Anleihe";
 public static final String FUTURE = "Future";
 public static final String DEFAULT_CURRENCY = "EUR";
 
-private ArrayList<Quote> quotes = null;
+private TreeMap<Date, Quote> quotes = null;
 
 /**
  * Die Bezeichnung der Anlageklasse 
@@ -107,8 +109,8 @@ private String currency = null;
 	public void setCurrency(String currency) {this.currency = currency;	}
 
 	@Override
-	public ArrayList<Quote> getQuotes()	{return this.quotes;}
+	public TreeMap<Date, Quote> getQuotes()	{return this.quotes;}
 
 	@Override
-	public void setQuotes(ArrayList<Quote> quotes)	{this.quotes = quotes;}
+	public void setQuotes(TreeMap<Date, Quote> quotes)	{this.quotes = quotes;}
 }

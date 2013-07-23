@@ -3,19 +3,14 @@
  */
 package de.fsch.e4.ibot.charts.finance;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.Map.Entry;
-import java.util.NavigableMap;
-import java.util.SortedMap;
 import java.util.TreeMap;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Canvas;
-import org.eclipse.swt.graphics.GC;
 
 import de.fsch.e4.ibot.asset.ISecurity;
 import de.fsch.e4.ibot.asset.Quote;
@@ -32,6 +27,8 @@ private Canvas canvas = null;
 private Image buffer = null;
 private ISecurity input = null;
 private int drawableElements = 0;
+private int totalWidth = 0;
+private int totalHeight = 0;
 
 
 	public CandlestickChart()
@@ -52,6 +49,8 @@ private int drawableElements = 0;
 	public void setCanvas(Canvas canvas)
 	{
 	this.canvas = canvas;	
+	this.totalWidth = canvas.getSize().x;
+	this.totalHeight = canvas.getSize().y;
 	setDrawableElements();	
 	}
 
@@ -96,5 +95,14 @@ private int drawableElements = 0;
 	{
 	return buffer;
 	}
+
+	@Override
+	public int getTotalWidth() {return totalWidth;}
+
+	@Override
+	public int getTotalHeight() {return totalHeight;}
+
+	@Override
+	public int getDrawableElements() { return this.drawableElements;}
 
 }
